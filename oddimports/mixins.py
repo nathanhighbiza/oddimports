@@ -13,7 +13,7 @@ class Loader(BaseLoader):
         self._filename = filename
 
     def create_module(self, spec):
-        with open(self._full_path) as file:
+        with open(self._full_path, "r") as file:
             self._data = self.get_data_from_file(file)
 
     def get_data_from_file(self, file):
